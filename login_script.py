@@ -53,7 +53,7 @@ if __name__ == "__main__":
     login_statuses = []
 
     for account in accounts:
-        email, password = account.split(':')
+        email, password = account.split(':', 1)
         status = login_koyeb(email, password)
         login_statuses.append(status)
         print(status)
